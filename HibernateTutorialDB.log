@@ -1,0 +1,12 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C2*/SET SCHEMA PUBLIC
+drop table if exists USER
+create table USER (ID integer not null, FIRSTNAME varchar(255), LASTNAME varchar(255), EMAIL varchar(255), USERNAME varchar(255), primary key (ID))
+INSERT INTO USER VALUES(1,'Mark','Johnson','mark.johnson@gmail.com','mjohnson')
+COMMIT
+INSERT INTO USER VALUES(2,'Samuel','Johnson','sam.johnson@gmail.com','sjohnson')
+COMMIT
+INSERT INTO USER VALUES(3,'Anton','Mills','anton.mills@gmail.com','amills')
+COMMIT
